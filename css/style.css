@@ -1,0 +1,280 @@
+.page{
+	display:none;
+}
+.page-active{
+	display:block;
+}
+
+.shop{
+	top:10px;
+	margin-left:40%;
+	position:absolute;
+}
+#count_Lvl{
+	text-align:center;
+	font-weight:bold;
+	left:175px;
+	top:190px;
+	position:fixed;
+	width:15px;
+	height:15px;
+	border-radius:50%;
+}
+#shop{
+	width:200px;
+	height:50px;
+	font-weight:bold;
+	font-size:40px;
+}
+.life_First_Character{
+	width:300px;
+	height:25px;
+	color:white;
+	background-color:red;
+	left:150px;
+	top:10%;
+	position:absolute;
+	z-index:1;
+}
+.experience_First_Character{
+	width:300px;
+	height:25px;
+	color:white;
+	background-color:blue;
+	left:150px;
+	top:13%;
+	position:absolute;
+	z-index:1;
+
+}
+#header_First_Character{
+	position:absolute;
+	z-index: 2;
+}
+#header_Second_Character{
+	position:absolute;
+	z-index: 2;
+	right:10px;
+	top:10px;
+	position:absolute;
+	transform: rotateY(-180deg);
+}
+#life_Second_Die{
+	width:300px;
+	height:25px;
+	right:0px;
+	color:white;
+	background-color:red;
+	position:absolute;
+	z-index:2;
+}
+.life_Second_Character{
+	width:300px;
+	height:25px;
+	color:white;
+	background-color:white;
+	border:1px solid red;
+	top:10%;
+	position:absolute;
+	right:194px;
+	z-index:1;
+	
+}
+.experience_Second_Character{
+	width:300px;
+	height:25px;
+	color:white;
+	background-color:blue;
+	top:13%;
+	right:194px;
+	position:absolute;
+}
+.level_First_Chracter{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	background-color:green;
+	color:white;
+	z-index:3;
+	position:absolute;
+	top:160px;
+	left:160px;
+}
+.level_Second_Chracter{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	background-color:green;
+	color:white;
+	z-index:3;
+	position:absolute;
+	top:180px;
+	right:160px;
+}
+ #lvl_First_chracter{
+	text-align:center;
+	font-weight:bold;
+	left:170px;
+	top:170px;
+	position:fixed;
+}
+ #lvl_Second_chracter{
+	text-align:center;
+	font-weight:bold;
+	right:170px;
+	top:190px;
+	position:fixed;
+}
+#info_First_Character{
+	width:300px;
+	height:300px;
+	background-color:yellow;
+	z-index:3;
+	position:absolute;
+	left:240px;
+	top:10%;
+	border-radius:5%;
+}
+#info_Picture_First_Character{
+	width:100px;
+	height:100px;
+}
+#info_Name_First_Character{
+	right:30px;
+	top:10px;
+	position:absolute;
+}
+#experience_Girl{
+	width:200px;
+	height:25px;
+	background-color:black;
+}
+#info_Second_Character{
+	width:300px;
+	height:400px;
+	background-color:yellow;
+	z-index:3;
+	position:absolute;
+	right: 240px;
+	top:10%;
+	border-radius:5%;
+}
+#info_Picture_Second_Character{
+	width:100px;
+	height:100px;
+}
+#info_Name_Second_Character{
+	right:30px;
+	top:10px;
+	position:absolute;
+}
+#experience_Men{
+	width:200px;
+	height:25px;
+	background-color:black;
+}
+#closeS{
+	float:right;
+	border-radius:50%;
+}
+#close{
+	float:right;
+	border-radius:50%;
+}
+#shop_Itens{
+	width:400px;
+	height:400px;
+	background-color:yellow;
+	margin-left:33%;
+	top:10%;
+	position:absolute;
+	color:black;
+	border-radius:5%;
+}
+#btn_Shop{
+	float:right;
+	border-radius:50%;
+
+}
+#tittle_shop{
+	text-align:center;
+}
+#table_Itens{
+	left:60px;
+	position:relative;
+}
+.randomItens{
+	width:100px;
+	height:100px;
+	background-color:green;
+	left:150px;
+	position:relative;
+}
+#btn_Itens{
+	left:150px;
+	position:relative;
+}
+#start_image_First_Character{
+width:200px;
+height:300px;
+bottom:10px;
+position:absolute;
+}
+#image{
+	width:200px;
+height:300px;
+bottom:10px;
+position:absolute;
+}
+#imageFaca{
+	width:50px;
+height:50px;
+bottom:15%;
+left:250px;
+display:none;
+position:absolute;
+}
+#imageFaca:hover{
+  bottom:15%;
+  left:90%;
+  transition:all 3s linear;
+  -webkit-transition:all 3s linear;
+  -moz-transition:all 3s linear;
+  -o-transition:all 3s linear;
+}
+.teste2{
+	bottom:15%;
+  left:90%;
+  transition:all 3s linear;
+  -webkit-transition:all 3s linear;
+  -moz-transition:all 3s linear;
+  -o-transition:all 3s linear;
+}
+#start_image_second_Character{
+width:200px;
+height:300px;
+bottom:10px;
+right:10px;
+position:absolute;
+transform: rotateY(-180deg);
+}
+footer{
+	background-color:green;
+	display:flex;
+	position:fixed;
+	width:100%;
+	height:40px;
+	right:0;
+	bottom:0;
+}
+#center_Random_Item{
+	height:50px;
+	width:50px;
+	left:25px;
+	top:25px;
+	position:relative;
+}
+#combate{
+	bottom:50%;
+	position:absolute;
+}

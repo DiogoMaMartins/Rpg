@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RPG</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div id="info_First_Character" class="page ">
+  		<button id="close" onclick="closeF()">X</button>
+  		<img id="info_Picture_First_Character" src="FirstCharacter/header.png">
+  		<h3 id="info_Name_First_Character">Ninja Girl</h3>
+  		<h4 id="info_Attack_First_Character">Attack : <span id="count_Attack_First_Chracter">50</span></h4>
+  		<h4 id="info_Defense_First_Character">Defense : <span id="count_Defense_First_Chracter">20</span></h4>
+  		<h4 id="info_Experience_First_Character">Experience :<div id="experience_Girl"></div></h4>
+  		<h4 id="info_Itens_First_Character">Itens</h4>
+  	</div>
+  <div class="header_First_Character page-active" onclick="show()">
+  	<div id="info_First_Character" class="page ">
+  		<img id="info_Picture_First_Character" src="FirstCharacter/header.png">
+  		<h3 id="info_Name_First_Character">Ninja Girl</h3>
+  		<h4 id="info_Attack_First_Character">Attack : <span id="count_Attack_First_Chracter">50</span></h4>
+  		<h4 id="info_Defense_First_Character">Defense : <span id="count_Defense_First_Chracter">20</span></h4>
+  		<h4 id="info_Experience_First_Character">Experience :<div id="experience_Girl"></div></h4>
+  		<h4 id="info_Itens_First_Character">Itens</h4>
+  	</div>
+  	<div class="life_First_Character"></div>
+  	<div class="experience_First_Character"></div>
+  	<div class="level_First_Chracter"><span id="lvl_First_chracter">LVL<input id="count_Lvl" value="1" /></span></div>
+  	<img id="header_First_Character" src="FirstCharacter/header.png">
+  </div>
+  <div class="shop">
+  	<button id="shop" class="page-active" onclick="shop()">Shop</button>
+  </div>
+   <div id="shop_Itens" class="page " >
+   	<button  id="btn_Shop" onclick="shopF()">x</button>
+   	<h2 id="tittle_shop" >Buy your items</h2>
+   	<table id="table_Itens" border="2px">
+   		<tr>
+   		 <th><img id="item1" src="imgItens/fire.png"></th>
+   		 <th><img id="item2" src="imgItens/strong.png"></th>
+         <th><img id="item3" src="imgItens/water.png"></th>
+         <th><img id="item4" src="imgItens/trovao.png"></th>
+         <th><img id="item5" src="imgItens/gasoline.png"></th>
+     </tr>
+     <tr>
+     	<td><img id="item6" src="imgItens/potion.png"></td>
+     	<td><img id="item7" src="imgItens/speed.png"></td>
+     	<td><img id="item8" src="imgItens/tortue.png"></td>
+     	<td><img id="item9" src="imgItens/bouclier.png"></td>
+     	<td><img id="level" src="imgItens/level.png"></td>
+     </tr>
+   	</table>
+   	<br/>
+   	<br/>
+   	<div class="randomItens" id="randomItens" ><div id="center_Random_Item"></div></div>
+   	<br/>
+   	<button id="btn_Itens" onclick="teste()">Random Items</button>
+   </div>
+   	<div id="info_Second_Character" class="page">
+  		<button id="closeS" onclick="closeSecond()">X</button>
+  		<img id="info_Picture_Second_Character" src="SecondCharacter/header.png">
+  		<h3 id="info_Name_Second_Character">Ninja Men</h3>
+  		<h4 id="info_Attack_Second_Character">Attack : <span id="count_Attack_Second_Chracter">50</span></h4>
+  		<h4 id="info_Defense_Second_Character">Defense : <span id="count_Defense_Second_Chracter">20</span></h4>
+  		<h4 id="info_Experience_Second_Character">Experience :<div id="experience_Men"></div></h4>
+  		<h4 id="info_Itens_Second_Character">Itens</h4>
+  	</div>
+  <div class="header_Second_Character " onclick="showS()">
+  	<div class="life_Second_Character"><div id="life_Second_Die"></div></div>
+  	<div class="level_Second_Chracter" value="lvl"><span id="lvl_Second_chracter">LVL</span></div>
+  	<div class="experience_Second_Character"></div>
+  	<img id="header_Second_Character" src="SecondCharacter/header.png">
+  </div>
+  </header>
+  <body>
+
+    <button id="combate" onclick="firstAnimation()">teste</button>
+    <button id="laVie" ></button>
+    <img id="image" src="FirstCharacter/Jump_Throw__000.png">
+    <img id="imageFaca" class="teste2" src="FirstCharacter/Kunai.png">
+  	<img id="start_image_second_Character" src="SecondCharacter/Attack__000.png">
+ <script type="text/javascript" src="javascript/main.js"></script>
+
+
+ <footer>
+ </footer>
+</body>
+</html>
