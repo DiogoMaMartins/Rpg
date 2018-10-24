@@ -46,189 +46,70 @@ var item =new Array();
       count++;
         //document.write(item[teste]);
 }
- }  
- //random=Math.floor(Math.random()*item.length);
-  //document.write(item[random]);
-
+ }  var combate=document.getElementById("combate");
+combate.addEventListener("click", firstAnimation);
+    var firstAttackEnnemy=["SecondCharacter/Jump_Throw__000.png", "SecondCharacter/Jump_Throw__001.png", "SecondCharacter/Jump_Throw__002.png","SecondCharacter/Jump_Throw__003.png","SecondCharacter/Jump_Throw__004.png","SecondCharacter/Jump_Throw__005.png","SecondCharacter/Jump_Throw__006.png","SecondCharacter/Jump_Throw__007.png","SecondCharacter/Jump_Throw__008.png","SecondCharacter/Jump_Throw__009.png"]
+   var imageEnnemy=document.getElementById("start_image_second_Character");
+   var imageEnnemyFixed=["SecondCharacter/Attack__000.png"]
    var image = document.getElementById("image");
    var currentPos = 0;
    var currentPos2=0;
    var images = ["FirstCharacter/Jump_Throw__000.png", "FirstCharacter/Jump_Throw__001.png", "FirstCharacter/Jump_Throw__002.png","FirstCharacter/Jump_Throw__003.png","FirstCharacter/Jump_Throw__004.png","FirstCharacter/Jump_Throw__005.png","FirstCharacter/Jump_Throw__006.png","FirstCharacter/Jump_Throw__007.png","FirstCharacter/Jump_Throw__008.png","FirstCharacter/Jump_Throw__009.png"]
    var imagemFaca=["FirstCharacter/Kunai.png"];
-   var imageSegundoCaracter=["SecondCharacter/Dead__000.png","SecondCharacter/Dead__001.png","SecondCharacter/Dead__002.png","SecondCharacter/Dead__003.png","SecondCharacter/Dead__004.png","SecondCharacter/Dead__005.png","SecondCharacter/Dead__006.png","SecondCharacter/Dead__007.png","SecondCharacter/Dead__008.png","SecondCharacter/Dead__009.png"];
+   var imageSegundoCaracter=["SecondCharacter/Dead__000.png","SecondCharacter/Dead__001.png","SecondCharacter/Dead__002.png","SecondCharacter/Dead__003.png","SecondCharacter/Dead__004.png","SecondCharacter/Dead__005.png","SecondCharacter/Dead__006.png","SecondCharacter/Dead__007.png","SecondCharacter/Dead__008.png","SecondCharacter/Dead__009.png","SecondCharacter/Jump_Throw__000.png"];
    var imageSegundo=document.getElementById("start_image_second_Character");
    var second_CharDie=document.getElementsByClassName("life_Second_Die");
    var contorDeNivel = document.getElementById("count_Lvl");
    var countFaca=0;
-    function changeWidth() {
- document.getElementById("life_Second_Die").style.width = "200px";
-}
+   //aqui em baixo tem a barra px
+    let life=300;
+    let removeLife=20;
+    function changeWidthEnnemy(){
+    setTimeout(function changeWidth() {
+ let testelife=document.getElementById("life_Second_Die")
+ testelife.style.width = life-removeLife+"px";
+ imageFaca.style.display = "none";
+ },3000);
+    }
 //Aqui vai ter a funcao do caracter a morrer
 function dieSecondCharacter(){
-     			      	if(currentPos2==0){
-     			      		start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			      		currentPos2++;
-
-     			      	}else if(currentPos2==1){
-     			    start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			          			      currentPos2++;
-     			      
-     			    }else if(currentPos2==2){
-     	
-     			      start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			    
-     			      currentPos2++;
-     			 
-     			    }else if(currentPos2==3){
-     			      	
-     			      start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			      
-     			      currentPos2++;
-     			  
-     			 
-     			    }else if(currentPos2==4){
-     			      	
-     			      start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			      
-     			      currentPos2++;
-     			      
-     			 
-     			    }else if(currentPos2==5){
-     			      	
-     			      start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			     
-     			      currentPos2++;
-     			 
-     			    }else if(currentPos2==6){
-     			      	
-     			      start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			     
-     			      currentPos2++;
-     			 
-     			    }else if( currentPos2==7){
-     			      	
-     			      start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			      
-     			      currentPos2++;
-     			 
-     			    }else if(currentPos2==8){
-     			      	
-     			      start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			    
-     			      currentPos2++;
-     			 
-     			    }else if(currentPos2==9 ){
-     			      	
-     			      start_image_second_Character.src=(imageSegundoCaracter[currentPos2]);
-     			   
-     			      currentPos2++;
-     			       contorDeNivel.value = "2";
-     			      second_CharDie.style.width = "400px";
-     			      
-     			    }
-     			    setInterval(dieSecondCharacter, 1000);
-     			    changeWidth();
-     			      }
+    for(let a=0;a<imageSegundoCaracter.length;a++){
+        setTimeout(function dieEnne(){
+            let dieEnnemy=imageSegundoCaracter[a];
+        imageSegundo.src=dieEnnemy;
+        },a*1000);
+    }
+    // imageFaca.style.display = "none";
+     changeWidthEnnemy();
+    
+ }
 //aqui em cima vai ter a funcao do caracter a morrer
-//aqui em baixo vai a animacao da faca
-function faca(){
-	if(counFaca==0){
-		imageFaca.src = (imagemFaca[0]);
-		imageFaca.setAttribute("style", "display:block;");
-		countFaca++;
-	}else if(counFaca==1){
-                	image.src = images[currentPos];
-                	imageFaca.src = (imagemFaca[0]);
-                	imageFaca.setAttribute("style", "display:block;left:270px;");
-     			        currentPos++;
-     			      }else if(counFaca==2 ){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:370px;");
-                     counFaca++;
-     			    }else if(counFaca==3){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:470px;");
-     			      counFaca++;
-     			    }else if(counFaca==4 ){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:570px;");
-     			      
-     			          counFaca++;
-     			    }else if(currentPos==5){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:670px;");
-     			      counFaca++;
-     			    }else if(counFaca==6){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:770px;");
-     			      counFaca++;
-     			    }else if(counFaca==7){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:870px;");
-     			      counFaca++;
-     			    }else if(counFaca==8 ){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:970px;");
-     			      counFaca++;
-     			 
-     			    }else if(counFaca==9 ){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:970px;");
-     			      counFaca++;
-     			 
-     			    }else if(counFaca==10){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:1070px;");
-     			      counFaca++;
-     			 
-     			    }else if(counFaca==11 ){
-     			      	imageFaca.src=(imagemFaca[0]);
-     			      imageFaca.setAttribute("style","display:block;left:1170px;");
-     			       contorDeNivel.value = "2";
-     			       counFaca++;
-     			       setInterval(faca, 100);
-     			       
 
-	}
+function transition(){
+    imageFaca.style.transition="all 1s linear";
+ imageFaca.style.left = "90%";
 
 }
 //aqui em cima esta a animacao da faca
+//aqui em baixo tera a primeira animacao
+ function firstAnimation(){
+    for(let a=0;a<images.length;a++){
+        setTimeout(function timer(){
+            let firstAttackGirl=images[a];
+        image.src=firstAttackGirl;
+        },a*100);
+        contorDeNivel.value = "2";
+    }
+    transition();
+    dieSecondCharacter();
+ }
 
-     function firstAnimation(){
-     		if (currentPos==0 && currentPos2==0){
-     			image.src = images[currentPos];
-     			currentPos++;
-                }else if(currentPos==1){
-                	image.src = images[currentPos];
-     			        currentPos++;
-                }else if(currentPos==2){
-                	image.src = images[currentPos];
-     			        currentPos++;
-     	          }else if(currentPos==3){
-                	image.src = images[currentPos];
-     			        currentPos++;
-     			      }else if(currentPos==4){
-                	image.src = images[currentPos];
-     			        currentPos++;
-     			      }else if(currentPos==5){
-                	image.src = images[currentPos];
-     			        currentPos++;
-     			      }else if(currentPos==6){
-                	image.src = images[currentPos];
-     			        currentPos++;
-     			      }else if(currentPos==7){
-                	image.src = images[currentPos];
-     			        currentPos++;
-     			      }else if(currentPos==8){
-                	image.src = images[currentPos];
-     			        currentPos++;
-     			      }else if(currentPos==9){
-                	image.src = images[currentPos];
-                
-     			        currentPos++;
-     			      }
-     			    setInterval(firstAnimation, 100);
-     			    dieSecondCharacter();
-
-     }
-
+ function ennemyFirstAttack(){
+    for(let a=0;a<firstAttackEnnemy.length;a++){
+        setTimeout(function attackEnnemy(){
+            let allPicturesEnnemy=firstAttackEnnemy[a];
+        imageEnnemy.src=allPicturesEnnemy;
+       console.log(allPicturesEnnemy);
+        },a*100);
+    }
+ }
