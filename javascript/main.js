@@ -56,7 +56,8 @@ combate.addEventListener("click", firstAnimation);
    var currentPos2=0;
    var images = ["FirstCharacter/Jump_Throw__000.png", "FirstCharacter/Jump_Throw__001.png", "FirstCharacter/Jump_Throw__002.png","FirstCharacter/Jump_Throw__003.png","FirstCharacter/Jump_Throw__004.png","FirstCharacter/Jump_Throw__005.png","FirstCharacter/Jump_Throw__006.png","FirstCharacter/Jump_Throw__007.png","FirstCharacter/Jump_Throw__008.png","FirstCharacter/Jump_Throw__009.png"]
    var imagemFaca=["FirstCharacter/Kunai.png"];
-   var imageSegundoCaracter=["SecondCharacter/Dead__000.png","SecondCharacter/Dead__001.png","SecondCharacter/Dead__002.png","SecondCharacter/Dead__003.png","SecondCharacter/Dead__004.png","SecondCharacter/Dead__005.png","SecondCharacter/Dead__006.png","SecondCharacter/Dead__007.png","SecondCharacter/Dead__008.png","SecondCharacter/Dead__009.png","SecondCharacter/Jump_Throw__000.png"];
+   var imageFacaEnnemy=document.getElementById("imageFacaEnnemy");
+   var imageSegundoCaracter=["SecondCharacter/Dead__000.png","SecondCharacter/Dead__001.png","SecondCharacter/Dead__002.png","SecondCharacter/Dead__003.png","SecondCharacter/Dead__004.png","SecondCharacter/Dead__005.png","SecondCharacter/Dead__006.png","SecondCharacter/Dead__007.png","SecondCharacter/Dead__008.png","SecondCharacter/Dead__009.png",];
    var imageSegundo=document.getElementById("start_image_second_Character");
    var second_CharDie=document.getElementsByClassName("life_Second_Die");
    var contorDeNivel = document.getElementById("count_Lvl");
@@ -64,10 +65,12 @@ combate.addEventListener("click", firstAnimation);
    //aqui em baixo tem a barra px
     let life=300;
     let removeLife=20;
+   
     function changeWidthEnnemy(){
     setTimeout(function changeWidth() {
  let testelife=document.getElementById("life_Second_Die")
  testelife.style.width = life-removeLife+"px";
+ life-=removeLife
  imageFaca.style.display = "none";
  },3000);
     }
@@ -77,7 +80,7 @@ function dieSecondCharacter(){
         setTimeout(function dieEnne(){
             let dieEnnemy=imageSegundoCaracter[a];
         imageSegundo.src=dieEnnemy;
-        },a*1000);
+        },a*400);
     }
     // imageFaca.style.display = "none";
      changeWidthEnnemy();
@@ -87,8 +90,13 @@ function dieSecondCharacter(){
 
 function transition(){
     imageFaca.style.transition="all 1s linear";
- imageFaca.style.left = "90%";
+ imageFaca.style.left = "88%";
 
+}
+function transitionEnnemy(){
+    imageFacaEnnemy.style.display="block"
+    imageFacaEnnemy.style.transition="all 1s linear"
+    imageFacaEnnemy.style.right="88%";
 }
 //aqui em cima esta a animacao da faca
 //aqui em baixo tera a primeira animacao
@@ -112,4 +120,17 @@ function transition(){
        console.log(allPicturesEnnemy);
         },a*100);
     }
+    transitionEnnemy();
+    changeWidthPlayer();
  }
+
+ //-------------
+  function changeWidthPlayer(){
+    let lifeplayer=300;
+    let removeLifePlayer=20;
+    setTimeout(function changeWidthPlaye() {
+ let tester=document.getElementById("life_First_Character")
+ tester.style.width = lifeplayer-removeLifePlayer+"px";
+ lifeplayer-=removeLifePlayer
+ },300);
+    }
